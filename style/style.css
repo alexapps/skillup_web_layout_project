@@ -37,9 +37,11 @@ a:hover {
 }
 .main {
   min-height: 100px;
-  background-color: #f00;
+  
   flex-grow: 1;
   min-height: calc(100vh - 199px);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .left {
   min-height: 100px;
@@ -129,20 +131,100 @@ padding: 15px 20px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.title {
+   background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+    text-align: left;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 22px;
+
+}
+
 .bredcrumb {
     background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
     text-align: right;
+    padding: 10px 30px;
+    border-radius: 7px;
 
 }
 .bredcrumb a {
   font-weight: bold;
 }
 
+.bredcrumb .fas {
+  color: #fff;
+  padding: 0px 5px 0px 9px;
+  display: inline-block;
+  margin-bottom: -3px; 
+  font-size: 14px;
+}
+
+
 .bredcrumb span {
   color: #ccc;
 letter-spacing: 2px;
 font-size: 0.8rem;
 text-transform: uppercase;
+}
+
+.content-item {
+
+  padding: 10px;
+  width: 33.33333%;
+  flex-grow: 1;
+  border-radius: 7px;
+}
+
+
+
+.content-item div {
+  background-color: #777;
+  height: 100px;
+}
+
+.content-item__wrapper {
+  position: absolute;
+  
+}
+
+.content-item__title {
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap;
+  -ms-text-overflow: ;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  background: red;
+  height: 40px;
+
+}
+
+.content-item__img {
+  width: 100%;
+
+}
+
+.content-item__description {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  font-size: 0.9rem;
+  height: 100%;
+  color: #fff
+height: calc(100% - 40px) ;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap ;
+   margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 20px;
 }
 
 
@@ -163,6 +245,36 @@ text-transform: uppercase;
   .right {
     width: 50%;
   }
+
+  .content-item {
+    width: 50%;
+  }
+  .clear-menu-btn {
+    display: block;
+  }
+  .clear-menu-btn:active {
+
+  }
+
+  .menu__list {
+    display: none;
+    float: none;
+    text-align: center;
+    
+  }
+  .menu__item  {
+    float: none;
+     margin-left: 10px;
+     margin-right: 10px;
+     display: block;
+  }
+
+  .menu__item a {
+    
+     display: block;
+  }
+
+
 }
 
 @media (max-width: 640px) {
