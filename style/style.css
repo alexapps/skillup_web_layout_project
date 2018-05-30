@@ -45,9 +45,9 @@ a:hover {
 }
 .left {
   min-height: 100px;
-  background-color: orange;
   width: 250px;
   order: -1;
+
   
 }
 .right {
@@ -258,7 +258,6 @@ a:hover {
 }
 
 
-
 .content {
   display: flex;
   flex-wrap: wrap ;
@@ -266,6 +265,61 @@ a:hover {
   margin-right: -10px;
   padding-top: 20px;
 }
+
+.container-left {
+   display: flex;
+   flex-direction: column;
+
+
+}
+
+.search-bar, 
+.search-category, 
+.search-about {
+   position: relative;
+   background: rgba(0, 0, 0, 0.3);
+   border-radius: 7px 7px 7px 7px; 
+   padding-left: 20px;
+   padding-top: 5px;
+   color: #eeeeee;
+   
+  
+}
+
+.search-bar h3, 
+.search-category h3, 
+.search-about h3 {
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333333;
+}
+
+.search-bar {
+  flex: 1;
+}
+
+.search-category {
+  margin-top: 20px;
+  flex: 4;
+
+}
+
+.search-category a {
+
+      color: #eeeeee;
+    text-decoration: none;
+}
+
+
+.search-about {
+  margin-top: 20px;
+  flex: 3;
+}
+
+.search-about p {
+  color: #cccccc;
+}
+
 
 
 
