@@ -1,5 +1,12 @@
+
+
 * {
 	box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+    line-height: 1.15;
 }
 
 body {
@@ -23,6 +30,13 @@ a:hover {
 
 }
 
+
+h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333333;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +44,7 @@ a:hover {
 }
 .header {
   min-height: 100px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: 'Roboto', sans-serif;
   margin-bottom: 30px;
   border-radius: 0 0 7px 7px;   
@@ -52,12 +66,13 @@ a:hover {
 }
 .right {
   min-height: 100px;
-  background-color: #f0f;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 200px;
+  border-radius: 7px 7px 7px 7px; 
 }
 .footer {
   min-height: 100px;
-  background-color: #00f
+  background-color: #00f;
 }
 
 .logo__image {
@@ -100,7 +115,7 @@ a:hover {
 .menu  {
   display: table;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0 0 7px 7px;
 }
 
@@ -118,7 +133,7 @@ a:hover {
 }
 
 .menu__item a:hover{  
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .menu__item:last-child {
@@ -128,7 +143,7 @@ a:hover {
 
 .menu__item.active a {
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -175,7 +190,7 @@ a:hover {
   height: auto;
   flex-grow: 1;
   border-radius: 7px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   margin: 10px 10px 10px 10px;
   display: block;
 }
@@ -198,15 +213,15 @@ a:hover {
 }
 
 .content-item__wrapper a:hover .content-item__description {
-    top: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    transition: top, 0.5s;
+  top: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: top, 0.5s;
 
 }
 
 .content-item__wrapper a:hover .content-item__title {
-    background: rgba(0, 0, 0, 0.5);
-    transition: background, 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background, 0.5s;
 }
 
 .content-item__image {
@@ -233,7 +248,7 @@ a:hover {
   text-align: center;
   max-width: 100%;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   z-index: 2;
 }
@@ -267,8 +282,8 @@ a:hover {
 }
 
 .container-left {
-   display: flex;
-   flex-direction: column;
+ display: flex;
+ flex-direction: column;
 
 
 }
@@ -276,23 +291,16 @@ a:hover {
 .search-bar, 
 .search-category, 
 .search-about {
-   position: relative;
-   background: rgba(0, 0, 0, 0.3);
-   border-radius: 7px 7px 7px 7px; 
-   padding-left: 20px;
-   padding-top: 5px;
-   color: #eeeeee;
-   
-  
+ position: relative;
+ background: rgba(0, 0, 0, 0.5);
+ border-radius: 7px 7px 7px 7px; 
+ padding-left: 20px;
+ padding-top: 5px;
+ color: #eeeeee;
+
+
 }
 
-.search-bar h3, 
-.search-category h3, 
-.search-about h3 {
-      margin: 0;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #333333;
-}
 
 .search-bar {
   flex: 1;
@@ -305,11 +313,20 @@ a:hover {
 }
 
 .search-category a {
-
-      color: #eeeeee;
-    text-decoration: none;
+  display: block;
+  color: #eeeeee;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px 0;
+  size: 14px;
 }
 
+.search-category a:hover {
+  padding-left: 15px;
+  transition: padding-left, 0.5s;
+  color: red;
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .search-about {
   margin-top: 20px;
@@ -320,13 +337,53 @@ a:hover {
   color: #cccccc;
 }
 
+.right-container {
+ display: flex;
+ flex-direction: column;
+}
 
+.right-container h4 {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #eeeeee;
+}
+
+.right-item {
+  flex: 1;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.right-item  img {
+  float: left;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+.right-item  span {
+  margin: 10px 0 10px 10px;
+  color: #cccccc;
+  text-shadow: 0px 0px 5px #000000;
+  font-size: 12px;
+}
 
 
 @media (max-width: 1024px) {
   .right {
     width: 100%;
   }
+  .right-container {
+
+   flex-direction: row;
+ }
 }
 @media (max-width: 768px) {
   .main {
