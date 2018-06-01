@@ -6,7 +6,7 @@
 
 html {
   font-family: sans-serif;
-    line-height: 1.15;
+  line-height: 1.15;
 }
 
 body {
@@ -35,6 +35,7 @@ h3 {
   margin: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #333333;
+  color: #eeeeee;
 }
 
 .container {
@@ -69,10 +70,14 @@ h3 {
   background-color: rgba(0, 0, 0, 0.5);
   width: 200px;
   border-radius: 7px 7px 7px 7px; 
+
 }
+
 .footer {
+  
+  flex-direction: column;
   min-height: 100px;
-  background-color: #00f;
+  
 }
 
 .logo__image {
@@ -337,9 +342,48 @@ h3 {
   color: #cccccc;
 }
 
+.search-bar form {
+  position: relative; 
+  margin: 15px 0 7px;
+}
+
+.search-bar .fa-search {
+  position: absolute;
+  margin-top: 1px;
+  padding: 7px 9px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eeeeee;
+}
+
+
+
+.search-bar input {
+  box-sizing: border-box;
+  padding: 7px 8px 7px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaaaaa;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+
+.search-bar input:focus {
+
+  background: rgba(0, 0, 0, 0.1);
+  color: #eeeeee;
+}
+
+
 .right-container {
  display: flex;
  flex-direction: column;
+ padding-left: 20px;
+ padding-top: 5px;
+ padding-right: 20px;
+
 }
 
 .right-container h4 {
@@ -350,29 +394,100 @@ h3 {
   color: #eeeeee;
 }
 
+
 .right-item {
   flex: 1;
   padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
   display: block;
+
+
 }
 
-.right-item  img {
+.img-wrapper {
+  overflow: hidden;
+}
+
+.right-item img {
   float: left;
-  height: 100%;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  width: 75px;
+  height: 75px;
+  margin: 0 5px 5px 0;
+  
 
 }
+
+
+.right-item a:hover img {
+  transform: scale(1.1); 
+  transition: transform 0.5s;
+  width: 75px;
+  height: 75px;
+
+}
+
+.right-item a:hover h4 {
+  color: red;
+
+}
+
+.right-item a:hover span {
+  color: white;
+
+}
+
+
 
 
 .right-item  span {
-  margin: 10px 0 10px 10px;
+  display: block;
+  margin: 5px 0 5px 5px;
   color: #cccccc;
   text-shadow: 0px 0px 5px #000000;
   font-size: 12px;
+  line-height: 1.6;
+  
+  
+}
+
+.footer-container {
+ display: flex;
+ flex-direction: row;
+ padding-top: 5px;
+ margin-top: 10px;
+ 
+}
+
+.footer-tem {
+  
+  flex-grow: 1;
+  position: relative;
+  min-height: 100px;
+  width: calc(100% / 4);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px 7px 7px 7px; 
+  padding-left: 20px;
+  padding-top: 5px;
+  color: #eeeeee;
+  margin: 0 10px;
+
+}
+
+.footer-tem p {
+  color: #cccccc;
+}
+
+.footer-bottom {
+  flex: 1;
+  position: relative;
+  min-height: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px 7px 7px 7px; 
+  padding-left: 20px;
+  padding-top: 5px;
+  color: #eeeeee;
+  margin-top: 20px;
+  text-align: center;
 }
 
 
@@ -380,10 +495,8 @@ h3 {
   .right {
     width: 100%;
   }
-  .right-container {
 
-   flex-direction: row;
- }
+  
 }
 @media (max-width: 768px) {
   .main {
@@ -432,25 +545,33 @@ h3 {
    display: block;
  }
 
+ .footer-tem {
+  width: 100%;
+  margin: 0 0 20px 10px;
+}
+
 
 }
 
 @media (max-width: 640px) {
-	.left {
-    width: 100%;
-    
-  }
-  .right {
-    width: 100%;
-  }
-  .content-item {
-    width: calc(100% - 20px);
+ .footer-tem {
+  width: 100%;
+}
+.left {
+  width: 100%;
+  
+}
+.right {
+  width: 100%;
+}
+.content-item {
+  width: calc(100% - 20px);
 
-  }
-  .content-item div {
+}
+.content-item div {
 
-    height: 450px;
-  }
+  height: 450px;
+}
 
 }
 
